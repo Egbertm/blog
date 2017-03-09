@@ -9,6 +9,10 @@ tags:  大数据 spark
 {:toc}  
 
 这篇准备介绍如何在hadoop分布式集群中怎么集成spark环境，有文献称spark的运行效率是Hadoop 100倍，这个数字有点吓人啊，不过spark是基于内存的计算框架跟Hadoop不具有可比性，应该说spark同mapreduce 计算框架相比。
+
+
+
+
 ### 采用yarn部署安装spark  
   
 下载spark（对应于hadoop的版本2.7）  
