@@ -8,6 +8,11 @@ tags:  大数据 hadoop
 * content  
 {:toc}  
 
+实验室的设备已经来了一段时间了，还没有把大数据集群环境给搭建起来，接下就把一些大数据需要用到的环境先搭建起来。先搭建hadoop,hadoop是apache基金组织里的一个顶级项目。是一款支持数据密集型分布式应用程序并以Apache 2.0许可协议发布的开源软件框架。它支持在商品硬件构建的大型集群上运行的应用程序。Hadoop是根据谷歌公司发表的MapReduce和Google文件系统的论文自行实现而成。  
+
+
+
+
 ### 1 主服务器（master）  
 
  **1.创建用户**  
@@ -432,4 +437,9 @@ hadoop下载（本服务器使用的是hadoop2.7.2）
     stop-dfs.sh
     mr-jobhistory-daemon.sh stop historyserver
   
-配置结束。
+配置结束。  
+
+### 参考文献  
+【1】[http://www.cnblogs.com/freeweb/p/5157802.html](http://www.cnblogs.com/freeweb/p/5157802.html "http://www.cnblogs.com/freeweb/p/5157802.html")
+【2】[http://www.powerxing.com/spark-quick-start-guide/](http://www.powerxing.com/spark-quick-start-guide/ "http://www.powerxing.com/spark-quick-start-guide/")
+【3】[http://blog.csdn.net/cenwenchu79/article/details/2847529](http://blog.csdn.net/cenwenchu79/article/details/2847529 "http://blog.csdn.net/cenwenchu79/article/details/2847529")
