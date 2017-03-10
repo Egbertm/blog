@@ -440,6 +440,6 @@ hadoop下载（本服务器使用的是hadoop2.7.2）
 配置结束。  
 
 ### 参考文献  
-【1】[http://www.cnblogs.com/freeweb/p/5157802.html](http://www.cnblogs.com/freeweb/p/5157802.html "http://www.cnblogs.com/freeweb/p/5157802.html")
-【2】[http://www.powerxing.com/spark-quick-start-guide/](http://www.powerxing.com/spark-quick-start-guide/ "http://www.powerxing.com/spark-quick-start-guide/")
-【3】[http://blog.csdn.net/cenwenchu79/article/details/2847529](http://blog.csdn.net/cenwenchu79/article/details/2847529 "http://blog.csdn.net/cenwenchu79/article/details/2847529")
+【1】[http://www.cnblogs.com/freeweb/p/5157802.html](http://www.cnblogs.com/freeweb/p/5157802.html "http://www.cnblogs.com/freeweb/p/5157802.html")  
+【2】[http://www.powerxing.com/spark-quick-start-guide/](http://www.powerxing.com/spark-quick-start-guide/ "http://www.powerxing.com/spark-quick-start-guide/")  
+【3】[http://blog.csdn.net/cenwenchu79/article/details/2847529](http://blog.csdn.net/cenwenchu79/article/details/2847529 "http://blog.csdn.net/cenwenchu79/article/details/2847529")  

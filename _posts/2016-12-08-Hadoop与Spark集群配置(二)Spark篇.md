@@ -89,5 +89,5 @@ spark例子测试
 
 ### 参考文献
 【1】[http://wuchong.me/blog/2015/04/04/spark-on-yarn-cluster-deploy/](http://wuchong.me/blog/2015/04/04/spark-on-yarn-cluster-deploy/ "http://wuchong.me/blog/2015/04/04/spark-on-yarn-cluster-deploy/")  
-【2】[http://www.powerxing.com/spark-quick-start-guide/](http://www.powerxing.com/spark-quick-start-guide/ "http://www.powerxing.com/spark-quick-start-guide/")
-【3】[http://blog.csdn.net/cenwenchu79/article/details/2847529](http://blog.csdn.net/cenwenchu79/article/details/2847529 "http://blog.csdn.net/cenwenchu79/article/details/2847529")
+【2】[http://www.powerxing.com/spark-quick-start-guide/](http://www.powerxing.com/spark-quick-start-guide/ "http://www.powerxing.com/spark-quick-start-guide/")  
+【3】[http://blog.csdn.net/cenwenchu79/article/details/2847529](http://blog.csdn.net/cenwenchu79/article/details/2847529 "http://blog.csdn.net/cenwenchu79/article/details/2847529")  
