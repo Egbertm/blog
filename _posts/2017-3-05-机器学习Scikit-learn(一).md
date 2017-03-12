@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "机器学习之scikit-learn(一)"
-date:   2017-3-5 23:06:05
+date:   2017-3-05 23:06:05
 categories: 大数据
 tags:  大数据 机器学习
 ---
