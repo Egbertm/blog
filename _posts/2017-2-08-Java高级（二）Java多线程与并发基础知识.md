@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Java多线程与并发（一）基础知识"
+title:  "Java高级（二）Java多线程与并发基础知识"
 date:   2017-2-08 23:06:05
-categories: Java多线程
-tags:  Java多线程 并发
+categories: Java高级
+tags:  Java高级 多线程 并发
 ---
 * content  
 {:toc}  
