@@ -7,14 +7,14 @@
 
 # Site settings
 title: 哑音
-brief-intro: WEB Engineer
+brief-intro: Don't Say,Just Do It
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://egbertm.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
-github_username:  Egbertm
+# github_username:  Egbertm
 email: mekisstherain@gmail.com
 weibo_username: 3253120547
 
