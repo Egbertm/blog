@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "数据挖掘算法（四）naive bayes"
+title:  "机器学习之scikit-learn（二)"
 date:   2017-3-11 23:06:05
 categories: 算法
 tags:  算法 bayes
