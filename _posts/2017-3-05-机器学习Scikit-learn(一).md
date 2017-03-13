@@ -23,8 +23,11 @@ tags:  大数据 机器学习
 ### 1 python环境的安装  
 
 1.安装python2.7,现如今pyhton的版本已经有3.6了，可以通过python的官网[http://www.python.org](http://www.python.org "python 官网")下载对应的版本，考虑到版本3和版本2之间的差异，选择了版本2中的一个子版本python2.7.9 安装，python2.7.9的下载地址[https://www.python.org/downloads/](https://www.python.org/downloads/)，下载对应的windows版本根据系统的32位还是64位进行选择。Window x86-64-MSI installer 是64位的版本，Windows x86 MSI installer 是32位版本。下载来后，直接安装即可。  
-setuptools:setuptools 是一组由PEAK(Python Enterprise Application Kit)开发的 Python 的 distutils 工具的增强工具，可以让程序员更方便的创建和发布 Python的egg 包，特别是那些对其它包具有依赖性的状况。 由 setuptools 创建和发布的包看起来和基于 distutils 发布的包没什么不同。最终用户不需要事先安装 setuptools 甚至根本不需要知道 setuptools 的存在，而程序员也不需要附上完整的 setuptools，只需要包含一个大小约 8K 的ez_setup.py脚本作为启动模块，就可以在最终用户没有安装适当版本的 setuptools 时让这些包自动下载和安装 setuptools。  
-easy_install: 常使用python的人员，当需要安装第三方python包时，可能会用到easy_install命令。easy_install是由PEAK(Python Enterprise Application Kit)开发的setuptools包里带的一个命令，它用来自动地从http://pypi.python.org/simple/来安装egg包，相当于perl中的cpan或PPM、RedHat中的yum命令，但是系统都没有预装easy_install命令。如果之前也是使用.exe安装程序安装的setuptools，则安装前要在“添加/删除程序”中卸载旧的版本。安装完毕后，在Python的Scripts子目录下就会出现easy_install.exe程序。 确保将这个目录（例如 d:\Python26\Scripts）加入 PATH 环境变量。或者直接通过下载一个ez_setup.py 的脚本安装，通过执行`python ez_setup.py`,还可以通过源码安装，可以下载setuptools**.zip,解压进入安装包，通过命令`python setup.py install`安装即可。可以直接使用`easy_install *.egg` 文件直接安装软件，需要的依赖包会自动的下载，卸载软件的化直接使用`easy_install -m xx`卸载。  
+
+**setuptools**:setuptools 是一组由PEAK(Python Enterprise Application Kit)开发的 Python 的 distutils 工具的增强工具，可以让程序员更方便的创建和发布 Python的egg 包，特别是那些对其它包具有依赖性的状况。 由 setuptools 创建和发布的包看起来和基于 distutils 发布的包没什么不同。最终用户不需要事先安装 setuptools 甚至根本不需要知道 setuptools 的存在，而程序员也不需要附上完整的 setuptools，只需要包含一个大小约 8K 的ez_setup.py脚本作为启动模块，就可以在最终用户没有安装适当版本的 setuptools 时让这些包自动下载和安装 setuptools。  
+
+**easy_install**: 常使用python的人员，当需要安装第三方python包时，可能会用到easy_install命令。easy_install是由PEAK(Python Enterprise Application Kit)开发的setuptools包里带的一个命令，它用来自动地从http://pypi.python.org/simple/来安装egg包，相当于perl中的cpan或PPM、RedHat中的yum命令，但是系统都没有预装easy_install命令。如果之前也是使用.exe安装程序安装的setuptools，则安装前要在“添加/删除程序”中卸载旧的版本。安装完毕后，在Python的Scripts子目录下就会出现easy_install.exe程序。 确保将这个目录（例如 d:\Python26\Scripts）加入 PATH 环境变量。或者直接通过下载一个ez_setup.py 的脚本安装，通过执行`python ez_setup.py`,还可以通过源码安装，可以下载setuptools**.zip,解压进入安装包，通过命令`python setup.py install`安装即可。可以直接使用`easy_install *.egg` 文件直接安装软件，需要的依赖包会自动的下载，卸载软件的化直接使用`easy_install -m xx`卸载。  
+
 3 安装pip (python软件的另一种管理方式)
 直接通过setuptools命令安装pip `easy_install install pip`安装好后对于一些文件后缀为.whl的文件可以直接通过`pip install *.whl`如下面安装的numpy和matplotlib 就是通过pip安装的。  
 
