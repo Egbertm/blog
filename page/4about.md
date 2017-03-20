@@ -10,25 +10,34 @@ icon: heart
 
 ## 关于我
 
-2015年的我进入研究生的学习阶段，数据挖掘专业
+2015年的我进入研究生学习阶段，机器学习与数据挖掘专业
 
-在校硕士研究生一枚，2018年毕业。
+在校应届硕士研究生一枚，2018年毕业。
 
-热爱美好的事物，热爱生活，喜欢倒腾技术。
+研究生阶段给自己的目标：**认真**生活。
 
-很喜欢崔健的歌词：现实像块石头，精神像个蛋，石头虽然坚硬，可蛋里才是生命。
+## 专业技能
 
-还有，学习是一个非常愉快的过程。共同加油！
+* 掌握基本的数据结构和算法  
 
-## 联系我
+* 熟悉Linux， Java，Python，JavaScript。  
 
-* GitHub：[哑音](https://github.com/Egbertm)
+* 熟悉Hadoop平台，搭建过云环境，能够在分布式框架Hadoop上编写独立的应用程序。  
+
+* 熟悉Java Web 中的开发框架SSH(Struts,Spring,Hibernate),SSM(Spring,Spring MVC,Mybatis).  
+
+* 熟悉Mysql数据库，了解过非关系性数据库Mongodb,Redis,Memcached。
+
+
+## 联系方式
+
+* Phone:137-6799-xxxx
+
 * email：mekisstherain@gmail.com
-* [Weibo](http://weibo.com/u/3253120547)
 
-## 友情链接
+* Weibo:[http://weibo.com/u/3253120547](http://weibo.com/u/3253120547)
 
-[羡辙杂俎](http://zhangwenli.com/blog) \| [Anotherhome](https://www.anotherhome.net) \| [Reverland](http://reverland.org/) \| [ZhiLi](http://lizhipower.github.io/) \| [Simmer](http://simmer-jun.github.io/) \| [awthink](http://awthink.net/) \| [Aralic](http://aralic.github.io/) \| [zchen9](http://www.chen9.info/) \| [wuhuaji](http://wuhuaji.me/) \| [lisheng](http://www.lishengcn.cn/) \| [薛彬XueBin](http://axuebin.com/blog/) \| [TBOOX](http://www.tboox.org/cn/) 
+* Blog:[http://www.egbert.info](http://www.egbert.info "http://www.egbert.info")
 
 ## Comments
 
