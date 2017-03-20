@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "## Hadoop yarn及相关参数介绍"
+title:  "Hadoop yarn及相关参数介绍"
 date:   2017-3-19 23:06:05
 categories: 大数据
 tags:  大数据 Hadoop
@@ -21,19 +21,19 @@ tags:  大数据 Hadoop
 6. 从操作的角度来看，现在的 Hadoop MapReduce 框架在有任何重要的或者不重要的变化 ( 例如 bug 修复，性能提升和特性化 ) 时，都会强制进行系统级别的升级更新。更糟的是，它不管用户的喜好，强制让分布式集群系统的每一个用户端同时更新。这些更新会让用户为了验证他们之前的应用程序是不是适用新的 Hadoop 版本而浪费大量时间。  
 为从根本上解决旧 MapReduce 框架的性能瓶颈，促进 Hadoop 框架的更长远发展，从 0.23.0 版本开始，Hadoop 的 MapReduce 框架完全重构，发生了根本的变化。新的 Hadoop MapReduce 框架命名为 MapReduceV2 或者叫 Yarn，其架构图如下：
 ![https://www.ibm.com/developerworks/cn/opensource/os-cn-hadoop-yarn/images/image002.jpg](https://www.ibm.com/developerworks/cn/opensource/os-cn-hadoop-yarn/images/image002.jpg)  
+
 ### Hadoop yarn介绍  
 
-**yarn** 主要是将MR1中的资源管理和作业调度分开，分别用ResourceManger和ApplicationMaster进程来实现。
-1. ResourceManager 负责整个集群的资源调度。
+**yarn** 主要是将MR1中的资源管理和作业调度分开，分别用ResourceManger和ApplicationMaster进程来实现。  
+1. ResourceManager 负责整个集群的资源调度。  
 2. ApplicationMaster：负责应用相关的事务，比如任务的调度，任务的监控等。  
-   
-yarn作业的运行有以下几个步骤：  
+ yarn作业的运行有以下几个步骤：  
 
 1 作业的提交  
 client 向整个集群提交MapReduce作业。此过程有新的Job Id由资源管理器产生。作业的核实输出，计算输入的split的大小。将作业的jar,配置文件，split的信息拷贝到HDFS中。最后调用资源管理器submitApplication（）来提交作业。    
 2 作业的初始化  
 当作业管理器收到submitApplication（）请求是就将作业请求发送给调度器scheduler,调度器分配container,然后资源管理器在该container内启动应用管理器进程，由节点管理器监控。
- MapReduce作业的应用管理器是一个主类为MRAppMaster的Java应用. 其通过创造一些bookkeeping对象来监控作业的进度, 得到任务的进度和完成报告(第6步). 然后其通过分布式文件系统得到由客户端计算好的输入split(第7步). 然后为每个输入split创建一个map任务, 根据mapreduce.job.reduces创建reduce任务对象.  
+ MapReduce作业的应用管理器是一个主类为MRAppMaster的Java应用. 其通过创造一些bookkeeping对象来监控作业的进度, 得到任务的进度和完成报告. 然后其通过分布式文件系统得到由客户端计算好的输入split. 然后为每个输入split创建一个map任务, 根据mapreduce.job.reduces创建reduce任务对象.  
 
 3.任务分配  
 
@@ -61,7 +61,9 @@ Hadoop中yarn作为资源管理器，在底层控制调配资源。yarn中资源
 yarn-node-manager.resource.memory-mb=12288*0.8主要是自己的物理内存为12GB,不能全部用完需要留一些给操作系统使用。
 
 yarn.scheduler.minimum-allocation-mb:每个container允许分配的最小单元的内存。当应用程序向Resourcemanager申请资源的时候（即申请container时），RM它分配给container是按照一个最小单位进行分配的。 例如， 我们设置分配的最小单位为4GB， 则RM分配出来的container的内存一定是4G的倍数。  假设现在有一个程序向RM申请 5.1G的内存， 则RM会分配给它一个8GB的container去执行。  
-在实际执行map reduce的job中， 一个container实际上是执行一个map 或者reduce task的jvm的进程。 那么这个jvm在执行中会不断的请求内存，假设它的物理内存或虚拟内存占用超出了container的内存设定， 则node manager 会主动的把这个进程kill 掉。  这里需要澄清一点，JVM使用的内存实际上分为虚拟内存和物理内存。JVM中所有存在内存中的对象都是虚拟内存， 但在实际运行中只有一部分是实际加载在物理内存中的。 因此在设置mapreduce的task的 jvm opts 参数时， 应将heap size 设置的比container允许的最大虚拟内存小。 这样jvm 不会因为申请过多的内存而被node manager 强制关闭。 当然设置最大heap size 如果在执行中被超过， jvm就会报 OutOfMemoryException。同时还有一个参数yarn.scheduler.maximum-allocation-mb，设定了RM可以分配的最大的container是多大。   假设应用程序向RM申请的资源超过了这个值， RM会直接拒绝这个请求。  
+
+在实际执行map reduce的job中， 一个container实际上是执行一个map 或者reduce task的jvm的进程。 那么这个jvm在执行中会不断的请求内存，假设它的物理内存或虚拟内存占用超出了container的内存设定， 则node manager 会主动的把这个进程kill 掉。  这里需要澄清一点，JVM使用的内存实际上分为虚拟内存和物理内存。JVM中所有存在内存中的对象都是虚拟内存， 但在实际运行中只有一部分是实际加载在物理内存中的。   
+因此在设置mapreduce的task的 jvm opts 参数时， 应将heap size 设置的比container允许的最大虚拟内存小。 这样jvm 不会因为申请过多的内存而被node manager 强制关闭。 当然设置最大heap size 如果在执行中被超过， jvm就会报 OutOfMemoryException。同时还有一个参数yarn.scheduler.maximum-allocation-mb，设定了RM可以分配的最大的container是多大。   假设应用程序向RM申请的资源超过了这个值， RM会直接拒绝这个请求。  
 
 **mapreduce2**(mapred-site.xml中)参数配置：  
 
@@ -204,7 +206,8 @@ mapreduce.reduce.java.opts=-Xmx7129m
 
 ### 参考文献
 
-[http://www.thebigdata.cn/Hadoop/9572.html](http://www.thebigdata.cn/Hadoop/9572.html "http://www.thebigdata.cn/Hadoop/9572.html")
+[http://www.thebigdata.cn/Hadoop/9572.html](http://www.thebigdata.cn/Hadoop/9572.html "http://www.thebigdata.cn/Hadoop/9572.html")  
+
 [http://www.cnblogs.com/codeOfLife/p/5492740.html](http://www.cnblogs.com/codeOfLife/p/5492740.html "http://www.cnblogs.com/codeOfLife/p/5492740.html")  
 
 [http://blog.csdn.net/tiimfei/article/details/46818257](http://blog.csdn.net/tiimfei/article/details/46818257 "http://blog.csdn.net/tiimfei/article/details/46818257")
