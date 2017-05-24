@@ -5,8 +5,9 @@ date: 2017-05-23 14:15:43
 categories: 工具
 tags:  工具
 ---
-* content
-    {:toc}  
+
+* content 
+{:toc}  
 
 
 对于Linux系统一款好的输入法软件是少不了的，很多在Windows下的用户转移到Linux下都
@@ -47,7 +48,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ quantal-backports main restricted univ
 * 安装im-switch切换工具：`sudo apt-get install im-switch`
 至此打开Ubuntu系统的软件搜索栏，检查是否安装了fcitx 和fcitx-config,如下图：
 
-    ![sougo](http://oqaij4yei.bkt.clouddn.com/2017_05_24_sougo_first.png)]
+    ![sougo](http://oqaij4yei.bkt.clouddn.com/2017_05_24_sougo_first.png)
 
 
 ### 安装sougo软件
