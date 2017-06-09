@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "latex实践之beamer模板"
-date: 2017-4-14 11:59:52
+date: 2017-4-15 11:59:52
 categories:工具
 tags:  latex 工具
 ---  
