@@ -4,13 +4,14 @@ title:  "latex实践之beamer模板"
 date: 2017-4-14 11:59:52
 categories:工具
 tags:  latex 工具
----
+---  
 * content
 {:toc}  
   
 对于包含大量公式的ppt,在排版上确实是挺耗时的，LaTeX提供了一套解决方案，也就是说
 把ppt的那种帧格式做成pdf帧排版，虽然效果上比不上ppt的酷炫，但是对于排出来的公式
-是传统ppt无法比拟的，下面即介绍如何用LaTeX beamer做PPT。
+是传统ppt无法比拟的，下面即介绍如何用LaTeX beamer做PPT。  
+
 
 
 
