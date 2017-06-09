@@ -67,7 +67,7 @@ definitions，fact，example以及examples，它们都以英文名称给出，�
 #### 插入图片
 
 插入双排图片如下：
-```language
+```latex
 \begin{figure}[htbp]
   \centering
  {
@@ -94,7 +94,7 @@ definitions，fact，example以及examples，它们都以英文名称给出，�
 #### 插入长公式。
 对于一些公式无法在一页中显示的时候我们需要进行缩放，因而下面介绍一些公式缩放的
 例子，也就是把公式放在scalebox中如下：  
-```language
+```latex
 \scalebox{0.7}{
 \parbox{\textwidth}{
 \[\begin{gathered}
