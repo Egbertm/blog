@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "latex实践之beamer模板"
-date: 2017-4-15 11:59:52
-categories:工具
+title:  "latex实践之Beamer模板"
+date: 2017-04-15 21:53:11
+categories: 工具
 tags:  latex 工具
----  
+---
 * content
 {:toc}  
   
