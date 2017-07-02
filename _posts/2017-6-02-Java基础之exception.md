@@ -43,8 +43,14 @@ tags:  Java
                                                                             
                                    Throwable                                         
                                        ^                                    
+ 
                                        |                                    
-             +---------+---------------+----------+------------------+      
+                           +-----------+------+                             
+                           |                  |                             
+                       Error                 Exception                                 
+                           |                  |                             
+             +-------------+                  |                             
+             |         +---------------=------+---+------------------+      
              |         |        |                 |                  |      
           Error       Exception ClassNotFound  CloneNotSupport RuntimeExcetion
              |         ^          Exception        Exception         |
