@@ -66,21 +66,14 @@ class Test3 extends Test2{
 
 以下是程序的输出：  
 
-> Press ENTER or type command to continue
-
-> this test2 static block
-
-> this is test3 static block
-
-> this test2 block
-
-> test2 construt
-
-> this is test3 block
-
-> test3 construt
-
-> subclass100
+> Press ENTER or type command to continue  
+> this test2 static block  
+> this is test3 static block  
+> this test2 block  
+> test2 construt  
+> this is test3 block  
+> test3 construt  
+> subclass100  
 
 通过实验我们发现在类进行实例化的过程中,遇到类的静态代码块的时候是优先被虚拟机处
 理并初始化的，且对于父类的初始化要比子类早
