@@ -67,12 +67,19 @@ class Test3 extends Test2{
 以下是程序的输出：  
 
 > Press ENTER or type command to continue
+
 > this test2 static block
+
 > this is test3 static block
+
 > this test2 block
+
 > test2 construt
+
 > this is test3 block
+
 > test3 construt
+
 > subclass100
 
 通过实验我们发现在类进行实例化的过程中,遇到类的静态代码块的时候是优先被虚拟机处
@@ -83,20 +90,20 @@ class Test3 extends Test2{
 static 可以用于修饰一个变量，一个方法，一个类，也可以单独的修饰一块代码。分别有
 不同的作用。
 
-1. static变量
+1、static变量
 
 static变量是静态变量，我们也称之为类变量，它不依赖于任何一个实例，对于同一个类
 变量，所有的实例共享这个类变量，也可以通过类名来直接访问。在JVM启动时，会在虚拟
 机的元数据区为静态变量分配内存并初始化的，这个过程要早于类的实例化过程。
 
-2. static方法  
+2、static方法  
 
 static 修饰的方法是类方法或叫静态方法，它也是从属于类的，不依附于具体的实例，在
 JVM启动时，类方法的一些信息也存储在虚拟机的元数据区，可以直接调用，因而它不能和
 abstract一同修饰同一个方法。常见的在工厂方法模式中我们用到了static 方法，而且在
 《effective java》中作者推荐使用静态工厂方法来替代构造器构造对象。用处很大。
 
-3. static块
+3、static块
 
 在引例中我们看到了static块它的加载在创建实例之前，对于这一点，我们可以利用它的
 这一特性配置一些类需要的初始化启动项等等。在Singlton单例模式中我们也曾见过这种
@@ -126,7 +133,7 @@ public class Singleton{
 
 ```
 
-4. static类
+4、static类
 
 static类描述的类是静态类，对于静态类中，它只能包含静态变量，静态方法，对于一切
 非静态方法和变量在编译时通不过编译。我们见到的一些static类也很多，还是用单例模
