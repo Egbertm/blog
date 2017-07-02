@@ -27,7 +27,7 @@ tags:  Java
 &emsp;&emsp; 在《Think in java》中是这样定义异常的：**异常情形是指阻止当前方法或者作用域继续执行的问题。**
 
 &emsp;&emsp; 那么什么时候才会出现异常呢？只有在你当前的环境下程序无法正常运行下
-去，也就是说程序已经无法来正确解决问题了，这时它所就会从当前环境中跳出，并抛出
+去，也就是说程序已经无法来正确解决问题了，这时它就会从当前环境中跳出，并抛出
 异常。抛出异常后，它首先会做几件事。首先，它会使用new创建一个异常对象，然后在产
 生异常的位置终止程序，并且从当前环境中弹出对异常对象的引用，这时。异常处理机制
 就会接管程序，并开始寻找一个恰当的地方来继续执行程序，这个恰当的地方就是异常处
@@ -73,7 +73,7 @@ chineError             |                       ArithmeticException --+
          |                                 NoSuchElementException ---+ 
          +--MalformedURLException                                    | 
          |                                                           | 
-         |                                   NullPointerException ---+                                | 
+         |                                   NullPointerException ---+                                  
          +--UnKnowHostException
 
 ```
@@ -81,7 +81,8 @@ chineError             |                       ArithmeticException --+
 Exception。
 其中Error为错误，是程序无法处理的，如OutOfMemoryError、ThreadDeath等，出现这种
 情况你唯一能做的就是听之任之，交由JVM来处理，不过JVM在大多数情况下会选择终止线
-程。
+程。  
+
 &emsp;&emsp; 而Exception是程序可以处理的异常。它又分为两种CheckedException（受捡
 异常），一种是UncheckedException（不受检异常）。其中CheckException发生在编译阶
 段，必须要使用try…catch（或者throws）否则编译不通过。而UncheckedException发生在
