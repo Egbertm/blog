@@ -4,9 +4,10 @@ title:  "Java基础之exception"
 date: 2017-06-2 22:14:23
 categories: Java基础
 tags:  Java 
+---
 * content
 {:toc}  
-
+  
 对于Java 异常我们并不陌生，在对一些文件的操作时  和对一些数据库的连接操作时都用
 到了，需要我们在 `try catch`捕获异常并进行相应的处理，但是对于Java的整体的异常机
 制我们又好像没那么清晰。下面说说Java Exception。
@@ -43,12 +44,16 @@ tags:  Java
                                    Throwable                                         
                                        ^                                    
                                        |                                    
-                       +---------------+----------+------------------+      
-                       |        |                 |                  |      
-                    Exception ClassNotFound  CloneNotSupport RuntimeExcetion
-                       ^          Exception        Exception         |
+             +---------+---------------+----------+------------------+      
+             |         |        |                 |                  |      
+          Error       Exception ClassNotFound  CloneNotSupport RuntimeExcetion
+             |         ^          Exception        Exception         |
+ AWTError ---+         |                                             | 
+             |         |                       ClassCastException  --+ 
+             |         |                                             | 
+VirtualMa ---+         |                                             | 
+chineError             |                                             | 
                        |                                             | 
-                       |                       ClassCastException  --+ 
          +-------------+                                             | 
          |                                                           | 
     IOException                                ArithmeticException --+ 
