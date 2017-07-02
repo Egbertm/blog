@@ -43,7 +43,7 @@ tags:  Java
                                                                             
                                    Throwable                                         
                                        ^                                    
- 
+                                       |
                                        |                                    
                            +-----------+------+                             
                            |                  |                             
@@ -58,28 +58,24 @@ tags:  Java
              |         |                       ClassCastException  --+ 
              |         |                                             | 
 VirtualMa ---+         |                                             | 
-chineError             |                                             | 
+chineError             |                       ArithmeticException --+ 
                        |                                             | 
          +-------------+                                             | 
+         |                                  IllegalArgumentException-+  
+    IOException                                                      | 
          |                                                           | 
-    IOException                                ArithmeticException --+ 
+         |                                  IllegalStateException ---+ 
+         +--EOFException                                             |   
          |                                                           | 
+         |                                 IndexOutOfBoundsException-+ 
+         +--FileNotFoundException                                    |
          |                                                           | 
-         +--EOFException                    IllegalArgumentException-+  
+         |                                 NoSuchElementException ---+ 
+         +--MalformedURLException                                    | 
          |                                                           | 
-         |                                                           | 
-         +--FileNotFoundException           IllegalStateException ---+ 
-         |                                                           | 
-         |                                                           | 
-         +--MalformedURLException          IndexOutOfBoundsException-+ 
-         |                                                           |
-         |                                                           | 
-         +--UnKnowHostException            NoSuchElementException ---+ 
-                                                                     | 
-                                                                     | 
-                                             NullPointerException ---+ 
+         |                                   NullPointerException ---+                                | 
+         +--UnKnowHostException
 
-                                                                        
 ```
 图中可以看出Throwable是Java语言的中错误和异常的超类，它有两个子类，Error，
 Exception。
